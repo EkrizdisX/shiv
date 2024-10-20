@@ -1,0 +1,77 @@
+body {
+    background-color: #f8f9fa; /* Light gray background */
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.acceptance-page-container {
+    max-width: 800px;
+    margin: 50px auto;
+    background-color: white; /* White background for the page */
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+h1 {
+    text-align: center;
+    color: #343a40; /* Darker title */
+    margin-bottom: 20px;
+}
+
+.pending-players-list {
+    list-style: none;
+    padding: 0;
+}
+
+.pending-player-card {
+    background-color: #f8f9fa;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.pending-player-card h3 {
+    margin: 0;
+    color: #007bff; /* Blue for player name */
+}
+
+.pending-player-card p {
+    margin: 5px 0;
+    color: #495057; /* Darker gray for details */
+}
+
+button {
+    background-color: #28a745; /* Bootstrap green */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+
+.no-requests-message {
+    text-align: center;
+    color: #6c757d; /* Light gray message */
+}
+
+@media (max-width: 768px) {
+    .acceptance-page-container {
+        padding: 20px;
+    }
+
+    .pending-player-card {
+        padding: 15px;
+    }
+
+    button {
+        font-size: 14px;
+    }
+}

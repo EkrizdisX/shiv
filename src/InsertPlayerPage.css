@@ -1,0 +1,64 @@
+/* InsertPlayerPage.css */
+body {
+    background-color: #ffffff; /* White background */
+    font-family: 'Arial', sans-serif;
+}
+
+.insert-player-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #f8f9fa; /* Light gray background */
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #343a40;
+    margin-bottom: 20px;
+}
+
+.insert-player-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.games-selection {
+    margin-bottom: 20px;
+}
+
+.games-selection label {
+    margin-right: 20px;
+    font-weight: bold;
+}
+
+.player-inputs label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.player-inputs input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+}
+
+.submit-button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+    background-color: #0056b3;
+}

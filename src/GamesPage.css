@@ -1,73 +1,158 @@
-/* GamesPage.css */
-body {
-    background-color: #f8f9fa; /* Light gray background */
+/* Reset some basic elements for a consistent look */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
     font-family: 'Arial', sans-serif;
-    margin: 0; /* Remove default margin */
-}
+    background-color: #db3535;
+    background-image: url(./1194463.jpg);
+    color: #f70000;
+    line-height: 1.6;
+  }
+  
+  /* Container for the games page */
+  .games-page-container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #0000007e;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  }
+  .games-page-container h1{
+    color: thistle;
+  }
+  
+  /* Header styling */
+  .games-page-header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .games-page-header h1 {
+    font-size: 2.5rem;
+    color: #007BFF;
+    margin-bottom: 10px;
+  }
+  
+  .games-page-header p {
+    font-size: 1.2rem;
+    color: #666;
+  }
+  
+  /* Styling for the games grid */
+  .games-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+  }
+  
+  /* Individual game card styling */
+  .game-card {
+    background: #630e0e54;
+    border: 1px solid #e1e1e1;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .game-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Game thumbnail styling */
+  .game-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+  }
+  
+  /* Game title and info styling */
+  .game-card-content {
+    padding: 15px;
+    text-align: center;
+  }
+  
+  .game-card-content h3 {
+    font-size: 1.5rem;
+    color: #007BFF;
+    margin-bottom: 10px;
+  }
+  
+  .game-card-content {
 
-.games-container {
-    max-width: 1600px; /* Max width for the content */
-    margin: 20px auto; /* Centered horizontally with top/bottom margin */
-    padding: 20px; /* Padding inside the container */
-}
+    font-size: 1rem;
+    color: #fa0000;
+  }
+  
+  /* Responsive text sizes */
+  @media (max-width: 768px) {
+    .games-page-header h1 {
+      font-size: 2rem;
+    }
+    
+    .game-card-content h3 {
+      font-size: 5rem;
 
-h1 {
-    background-color: rgb(231, 231, 231); /* White background for cards */
-    border-radius: 10px;
-    border: 20px;
-    border-color: #0056b3;
-    font-size: 3cm;
-    text-align: center; /* Center the title */
-    color: #576777; /* Dark text for title */
-    margin-bottom: 20px; /* Space below the title */
-}
-
-.games-grid {
-    display: flex;
-    flex-wrap: wrap; /* Wrap items on smaller screens */
-    background-color: rgb(241, 241, 241); /* White background for cards */ /* Center the grid */
-}
-
-.game-card {
-    margin: 10px; /* Margin between cards */
-    background-color: rgb(241, 241, 241); /* White background for cards */
-    border-radius: 10px; /* Rounded edges for cards */
-    padding: 15px; /* Padding inside cards */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    text-align: center; /* Center text inside cards */
-    transition: transform 0.2s; /* Transition effect for hover */
-    width: 350px; /* Fixed width for game cards */
-}
-
-.game-card:hover {
-    transform: scale(1.05); /* Slightly enlarge the card on hover */
-}
-
-.game-card img {
-    border-radius: 10px; /* Rounded edges for images */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Slight shadow for images */
-    width: 250px; /* Fixed width for images */
-    height: 200px; /* Fixed height for images */
-    object-fit: cover; /* Crop the image to fit without stretching */
-}
-
-.game-card h3 {
-    color: #495057; /* Darker gray for text */
-    margin: 10px 0; /* Margin above and below headers */
-}
+    }
+  }
+/* GamesPage.css */
 
 .like-button {
-    font-size: 20px;
-    font-weight: bold;
-    background-color:rgb(241, 241, 241); /* Bootstrap primary color */
-    color: rgb(0, 0, 0); /* White text */
-    border: none; /* No border */
-    border-radius: 5px; /* Rounded edges */
-    padding: 10px; /* Padding for button */
-    cursor: pointer; /* Pointer cursor */
-    transition: background-color 0.3s; /* Transition effect for hover */
-}
+    background-color: #007bff; /* Blue background color */
+    color: white; /* White text color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px 20px; /* Vertical and horizontal padding */
+    font-size: 16px; /* Font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth background color transition */
+  }
+  
+  /* Change background color on hover */
+  .like-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+  }
+  
+  /* Optional: Add a focus state for accessibility */
+  .like-button:focus {
+    outline: none; /* Remove default outline */
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5); /* Add a custom focus ring */
+  }
+  /* Navigation.css */
 
-.like-button:hover {
-    background-color: #3edf3e79; /* Darker blue on hover */
-}
+.navigation-menu {
+    display: flex; /* Use flexbox for horizontal alignment */
+    justify-content: space-around; /* Space links evenly */
+    align-items: center; /* Center items vertically */
+    background-color: #540a5786; /* Dark background color */
+    padding: 15px 20px; /* Padding around the menu */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  }
+  
+  .nav-link {
+    color: white; /* White text color */
+    text-decoration: none; /* Remove underline from links */
+    font-size: 18px; /* Font size */
+    padding: 10px 15px; /* Padding around each link */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s ease; /* Smooth background color transition */
+  }
+  
+  /* Change background color on hover */
+  .nav-link:hover {
+    background-color: #1c115a8a; /* Darker gray on hover */
+  }
+  
+  /* Optional: Add active link style */
+  .nav-link.active {
+    background-color: #007bff; /* Blue background for the active link */
+    color: white; /* Ensure text color is white */
+  }
+  
+  
