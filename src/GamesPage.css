@@ -6,31 +6,37 @@ body {
 }
 
 .games-container {
-    max-width: 1200px; /* Max width for the content */
+    max-width: 1600px; /* Max width for the content */
     margin: 20px auto; /* Centered horizontally with top/bottom margin */
     padding: 20px; /* Padding inside the container */
 }
 
 h1 {
+    background-color: rgb(231, 231, 231); /* White background for cards */
+    border-radius: 10px;
+    border: 20px;
+    border-color: #0056b3;
+    font-size: 3cm;
     text-align: center; /* Center the title */
-    color: #343a40; /* Dark text for title */
+    color: #576777; /* Dark text for title */
     margin-bottom: 20px; /* Space below the title */
 }
 
 .games-grid {
     display: flex;
     flex-wrap: wrap; /* Wrap items on smaller screens */
-    justify-content: center; /* Center the grid */
+    background-color: rgb(241, 241, 241); /* White background for cards */ /* Center the grid */
 }
 
 .game-card {
     margin: 10px; /* Margin between cards */
-    background-color: rgb(231, 218, 218); /* White background for cards */
+    background-color: rgb(241, 241, 241); /* White background for cards */
     border-radius: 10px; /* Rounded edges for cards */
     padding: 15px; /* Padding inside cards */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
     text-align: center; /* Center text inside cards */
     transition: transform 0.2s; /* Transition effect for hover */
+    width: 350px; /* Fixed width for game cards */
 }
 
 .game-card:hover {
@@ -40,8 +46,9 @@ h1 {
 .game-card img {
     border-radius: 10px; /* Rounded edges for images */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Slight shadow for images */
-    max-width: 100%; /* Ensure image does not overflow */
-    height: auto; /* Maintain aspect ratio */
+    width: 250px; /* Fixed width for images */
+    height: 200px; /* Fixed height for images */
+    object-fit: cover; /* Crop the image to fit without stretching */
 }
 
 .game-card h3 {
@@ -50,8 +57,10 @@ h1 {
 }
 
 .like-button {
-    background-color: #007bff; /* Bootstrap primary color */
-    color: white; /* White text */
+    font-size: 20px;
+    font-weight: bold;
+    background-color:rgb(241, 241, 241); /* Bootstrap primary color */
+    color: rgb(0, 0, 0); /* White text */
     border: none; /* No border */
     border-radius: 5px; /* Rounded edges */
     padding: 10px; /* Padding for button */
@@ -60,5 +69,5 @@ h1 {
 }
 
 .like-button:hover {
-    background-color: #0056b3; /* Darker blue on hover */
+    background-color: #3edf3e79; /* Darker blue on hover */
 }
