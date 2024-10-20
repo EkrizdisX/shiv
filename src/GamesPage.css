@@ -4,11 +4,40 @@
     padding: 0;
     box-sizing: border-box;
   }
+  .background-video-container {
+    position: relative; /* Create a positioned container */
+    overflow: hidden; /* Prevent overflow */
+    height: 100vh; /* Full viewport height */
+}
+
+.background-video {
+    position: absolute; /* Position the video absolutely */
+    top: 50%; /* Center the video vertically */
+    left: 50%; /* Center the video horizontally */
+    min-width: 100%; /* Cover the full width */
+    min-height: 100%; /* Cover the full height */
+    width: auto; /* Auto width for aspect ratio */
+    height: auto; /* Auto height for aspect ratio */
+    z-index: -1; /* Send video behind content */
+    transform: translate(-50%, -50%); /* Center the video */
+}
+
+.games-page-container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.7); /* Use semi-transparent black for better visibility */
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    position: relative; /* Ensure this is relative for z-index stacking */
+    z-index: 1; /* Bring the content above the video */
+}
+
   
   body {
     font-family: 'Arial', sans-serif;
     background-color: #db3535;
-    background-image: url(./1194463.jpg);
+    background-image: url(./arc.jpg);
     color: #f70000;
     line-height: 1.6;
   }
@@ -23,7 +52,11 @@
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   }
   .games-page-container h1{
-    color: thistle;
+    color: rgb(255, 255, 255);
+    text-shadow: 
+    0 0 5px rgba(0, 0, 0, 0.6),
+    0 0 10px rgba(68, 68, 68, 0.8), 
+    0 0 15px rgb(211, 202, 207);
   }
   
   /* Header styling */
@@ -46,18 +79,19 @@
   /* Styling for the games grid */
   .games-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 20px;
   }
   
   /* Individual game card styling */
   .game-card {
-    background: #630e0e54;
+    background: #8d8d8d54;
     border: 1px solid #e1e1e1;
     border-radius: 8px;
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
+    width: 7.2cm;
   }
   
   .game-card:hover {
@@ -67,9 +101,11 @@
   
   /* Game thumbnail styling */
   .game-card img {
-    width: 100%;
+    margin: 10px;
+    width: 250px;
     height: 150px;
     object-fit: cover;
+    border-radius: 10px;
   }
   
   /* Game title and info styling */
@@ -80,9 +116,30 @@
   
   .game-card-content h3 {
     font-size: 1.5rem;
-    color: #007BFF;
+    color: #d7e3f0; /* Text color */
     margin-bottom: 10px;
+    position: relative;
+    text-shadow: 
+    0 0 5px rgba(0, 0, 0, 0.6),
+    0 0 10px rgba(68, 68, 68, 0.8), 
+    0 0 15px rgb(211, 202, 207);
   }
+  
+  @keyframes pulse {
+    0%, 100% {
+      text-shadow: 
+        0 0 5px rgba(255, 183, 193, 0.6),
+        0 0 10px rgba(255, 105, 180, 0.8),
+        0 0 15px rgba(255, 20, 147, 1);
+    }
+    50% {
+      text-shadow: 
+        0 0 10px rgba(255, 183, 193, 0.8),
+        0 0 20px rgba(255, 105, 180, 1),
+        0 0 30px rgba(255, 20, 147, 1);
+    }
+  }
+  
   
   .game-card-content {
 
@@ -104,7 +161,7 @@
 /* GamesPage.css */
 
 .like-button {
-    background-color: #007bff; /* Blue background color */
+    background-color: #00ccff4f; /* Blue background color */
     color: white; /* White text color */
     border: none; /* Remove border */
     border-radius: 5px; /* Rounded corners */
@@ -116,7 +173,7 @@
   
   /* Change background color on hover */
   .like-button:hover {
-    background-color: #0056b3; /* Darker blue on hover */
+    background-color: #0057b346; /* Darker blue on hover */
   }
   
   /* Optional: Add a focus state for accessibility */
@@ -130,18 +187,36 @@
     display: flex; /* Use flexbox for horizontal alignment */
     justify-content: space-around; /* Space links evenly */
     align-items: center; /* Center items vertically */
-    background-color: #540a5786; /* Dark background color */
+    background-color: #ffffff21; /* Dark background color */
     padding: 15px 20px; /* Padding around the menu */
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
   }
   
   .nav-link {
-    color: white; /* White text color */
-    text-decoration: none; /* Remove underline from links */
-    font-size: 18px; /* Font size */
-    padding: 10px 15px; /* Padding around each link */
-    border-radius: 5px; /* Rounded corners */
-    transition: background-color 0.3s ease; /* Smooth background color transition */
+    font-size: 1.5rem;
+    color: #f0f4f8; /* Text color */
+    margin-bottom: 10px;
+    position: relative;
+    text-shadow: 
+      0 0 5px rgba(0, 0, 0, 0.6),
+      0 0 10px rgba(68, 68, 68, 0.8), 
+      0 0 15px rgb(211, 202, 207);
+
+  }
+  
+  @keyframes pulse {
+    0%, 100% {
+      text-shadow: 
+        0 0 5px rgba(255, 183, 193, 0.6),
+        0 0 10px rgba(255, 105, 180, 0.8),
+        0 0 15px rgba(255, 20, 147, 1);
+    }
+    50% {
+      text-shadow: 
+        0 0 10px rgba(255, 183, 193, 0.8),
+        0 0 20px rgba(255, 105, 180, 1),
+        0 0 30px rgba(255, 20, 147, 1);
+    }
   }
   
   /* Change background color on hover */

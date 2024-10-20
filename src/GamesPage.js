@@ -18,25 +18,31 @@ const GamesPage = () => {
   };
 
   return (
-    <div>
-      <nav className="navigation-menu">
-        <Link to="/" className="nav-link">Home</Link>
-        <Link to="/insert-player" className="nav-link">Register Yourself</Link>
-      </nav>
-    <div className="games-page-container">
-      <h1>Games</h1>
-      <div className="games-grid">
-        {games.map(game => (
-          <div key={game._id} className="game-card">
-            <img src={game.thumbnail} alt={game.name} />
-            <div className='game-card-content'>
-            <h3>{game.name}</h3>
-            <button className="like-button" onClick={() => handleLikeGame(game._id)}>Like</button>
+    <div className="background-video-container">
+      <video autoPlay muted loop className="background-video">
+        <source src="/nep.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <div>
+        <nav className="navigation-menu">
+          <Link to="/" className="nav-link">Home</Link>
+          <Link to="/insert-player" className="nav-link">Register Yourself</Link>
+        </nav>
+        <div className="games-page-container">
+          <h1>Games</h1>
+          <div className="games-grid">
+            {games.map(game => (
+              <div key={game._id} className="game-card">
+                <img src={game.thumbnail} alt={game.name} />
+                <div className='game-card-content'>
+                  <h3>{game.name}</h3>
+                  <button className="like-button" onClick={() => handleLikeGame(game._id)}>Check Out</button>
+                </div>
+              </div>
+            ))}
           </div>
-          </div>
-        ))}
+        </div>
       </div>
-    </div>
     </div>
   );
 };

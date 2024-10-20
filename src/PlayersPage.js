@@ -19,8 +19,13 @@ const PlayersPage = () => {
   };
 
   return (
+    <div className="background-video-container">
+    <video autoPlay muted loop className="background-video">
+      <source src="/nep2.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
     <div className="players-container">
-      <h1>Players</h1>
+      <h1>Players Available</h1>
       <div className="players-grid">
         {players.map(player => (
           <div key={player._id} className="player-card">
@@ -30,6 +35,7 @@ const PlayersPage = () => {
           </div>
         ))}
       </div>
+    </div>
     </div>
   );
 };

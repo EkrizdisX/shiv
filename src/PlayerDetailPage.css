@@ -8,7 +8,7 @@ body {
 .player-details-container {
     max-width: 800px; /* Max width for the content */
     margin: 20px auto; /* Centered horizontally with top/bottom margin */
-    background-color: rgb(238, 232, 232); /* White background for content */
+    background-color: rgba(54, 148, 211, 0.404); /* White background for content */
     border-radius: 10px; /* Rounded edges */
     padding: 20px; /* Padding inside the container */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
@@ -24,12 +24,21 @@ body {
     margin: 20px auto; /* Add margin above and below */
     border-radius: 10px; /* Rounded edges for image */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Slight shadow */
+    width: 10cm; /* Set width */
+    height: 6cm; /* Set height */
+    border: 5px solid #000000; /* Black border */
 }
+
 
 .player-info {
     margin-top: 20px; /* Space above the player info */
-    color: #495057; /* Darker gray for text */
+    color: #000000; /* Darker gray for text */
     text-align: center; /* Center the player info */
+    background-color: #db362052;
+    width: 5cm;
+    align-content: center;
+    margin-left: 7.5cm;
+    border-radius: 10px;
 }
 
 .player-info h2,
