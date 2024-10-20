@@ -2,52 +2,60 @@
 body {
     background-color: #f8f9fa; /* Light gray background */
     font-family: 'Arial', sans-serif;
+    margin: 0; /* Remove default margin */
 }
 
 .player-details-container {
-    max-width: 800px;
-    margin: 20px auto;
-    background-color: white; /* White background */
-    border-radius: 10px;
-    padding: 20px;
+    max-width: 800px; /* Max width for the content */
+    margin: 20px auto; /* Centered horizontally with top/bottom margin */
+    background-color: rgb(238, 232, 232); /* White background for content */
+    border-radius: 10px; /* Rounded edges */
+    padding: 20px; /* Padding inside the container */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
 .player-details-container h1 {
-    color: #343a40; /* Dark text */
-    text-align: center;
+    color: #343a40; /* Dark text for title */
+    text-align: center; /* Center the title */
 }
 
 .player-details-container img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px; /* Rounded edges */
+    display: block; /* Center the image */
+    margin: 20px auto; /* Add margin above and below */
+    border-radius: 10px; /* Rounded edges for image */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Slight shadow */
 }
 
 .player-info {
-    margin-top: 20px;
+    margin-top: 20px; /* Space above the player info */
     color: #495057; /* Darker gray for text */
+    text-align: center; /* Center the player info */
+}
+
+.player-info h2,
+.player-info h3 {
+    margin: 10px 0; /* Margin above and below headers */
+    font-weight: normal; /* Normal weight for headers */
 }
 
 .player-info p {
-    margin: 10px 0;
-    font-size: 1em;
+    font-size: 1em; /* Default font size for paragraphs */
 }
 
 .back-button {
-    display: block;
-    background-color: #007bff; /* Bootstrap primary color */
-    color: white;
-    border: none;
-    border-radius: 5px;
-    padding: 10px;
-    margin: 20px auto;
-    text-align: center;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    width: 100px;
+    display: block; /* Make it a block element */
+    background-color: #20db5f; /* Bootstrap primary color */
+    color: white; /* White text */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded edges */
+    padding: 10px; /* Padding for button */
+    margin: 20px auto; /* Centered with margin */
+    text-align: center; /* Center text inside button */
+    cursor: pointer; /* Pointer cursor */
+    transition: background-color 0.3s; /* Transition effect for hover */
+    width: 100px; /* Fixed width */
 }
 
 .back-button:hover {
-    background-color: #0056b3; /* Darker blue on hover */
+    background-color: #4cc980; /* Darker blue on hover */
 }

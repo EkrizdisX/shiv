@@ -1,0 +1,64 @@
+/* PlayersPage.css */
+body {
+    background-color: #f8f9fa; /* Light gray background */
+    font-family: 'Arial', sans-serif;
+    margin: 0; /* Remove default margin */
+}
+
+.players-container {
+    max-width: 1200px; /* Max width for the content */
+    margin: 20px auto; /* Centered horizontally with top/bottom margin */
+    padding: 20px; /* Padding inside the container */
+}
+
+h1 {
+    text-align: center; /* Center the title */
+    color: #343a40; /* Dark text for title */
+    margin-bottom: 20px; /* Space below the title */
+}
+
+.players-grid {
+    display: flex;
+    flex-wrap: wrap; /* Wrap items on smaller screens */
+    justify-content: center; /* Center the grid */
+}
+
+.player-card {
+    margin: 10px; /* Margin between cards */
+    background-color: white; /* White background for cards */
+    border-radius: 10px; /* Rounded edges for cards */
+    padding: 15px; /* Padding inside cards */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    text-align: center; /* Center text inside cards */
+    transition: transform 0.2s; /* Transition effect for hover */
+}
+
+.player-card:hover {
+    transform: scale(1.05); /* Slightly enlarge the card on hover */
+}
+
+.player-card img {
+    border-radius: 10px; /* Rounded edges for images */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Slight shadow for images */
+    max-width: 100%; /* Ensure image does not overflow */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.player-card h3 {
+    color: #495057; /* Darker gray for text */
+    margin: 10px 0; /* Margin above and below headers */
+}
+
+.view-details-button {
+    background-color: #007bff; /* Bootstrap primary color */
+    color: white; /* White text */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded edges */
+    padding: 10px; /* Padding for button */
+    cursor: pointer; /* Pointer cursor */
+    transition: background-color 0.3s; /* Transition effect for hover */
+}
+
+.view-details-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}

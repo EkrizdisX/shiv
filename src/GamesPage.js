@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom'; // Updated import
+import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import './GamesPage.css';
 
 const GamesPage = () => {
   const [games, setGames] = useState([]);
-  const navigate = useNavigate(); // Updated to useNavigate
+  const navigate = useNavigate();
 
   useEffect(() => {
     axios.get('http://localhost:5000/api/games')
@@ -14,18 +14,18 @@ const GamesPage = () => {
   }, []);
 
   const handleLikeGame = (gameId) => {
-    navigate(`/players/${gameId}`); // Updated to use navigate
+    navigate(`/players/${gameId}`);
   };
 
   return (
-    <div>
+    <div className="games-container">
       <h1>Games</h1>
-      <div style={{ display: 'flex', flexWrap: 'wrap' }}>
+      <div className="games-grid">
         {games.map(game => (
-          <div key={game._id} style={{ margin: '10px', border: '1px solid black', padding: '10px' }}>
-            <img src={game.thumbnail} alt={game.name} width="200" height="100" />
+          <div key={game._id} className="game-card">
+            <img src={game.thumbnail} alt={game.name} />
             <h3>{game.name}</h3>
-            <button onClick={() => handleLikeGame(game._id)}>Like</button>
+            <button className="like-button" onClick={() => handleLikeGame(game._id)}>Like</button>
           </div>
         ))}
       </div>

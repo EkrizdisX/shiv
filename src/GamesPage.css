@@ -1,51 +1,64 @@
 /* GamesPage.css */
+body {
+    background-color: #f8f9fa; /* Light gray background */
+    font-family: 'Arial', sans-serif;
+    margin: 0; /* Remove default margin */
+}
 
 .games-container {
+    max-width: 1200px; /* Max width for the content */
+    margin: 20px auto; /* Centered horizontally with top/bottom margin */
+    padding: 20px; /* Padding inside the container */
+}
+
+h1 {
+    text-align: center; /* Center the title */
+    color: #343a40; /* Dark text for title */
+    margin-bottom: 20px; /* Space below the title */
+}
+
+.games-grid {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin: 20px 0; /* Adds some margin at the top and bottom */
+    flex-wrap: wrap; /* Wrap items on smaller screens */
+    justify-content: center; /* Center the grid */
 }
 
-.game-tile {
-    margin: 10px;
-    border: 1px solid #ddd; /* Light border for the tile */
-    border-radius: 10px; /* Rounded edges for the tile */
-    background: white;
-    overflow: hidden;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s;
-    text-align: center;
-    width: calc(25% - 20px); /* Responsive width (4 tiles per row) */
+.game-card {
+    margin: 10px; /* Margin between cards */
+    background-color: rgb(231, 218, 218); /* White background for cards */
+    border-radius: 10px; /* Rounded edges for cards */
+    padding: 15px; /* Padding inside cards */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    text-align: center; /* Center text inside cards */
+    transition: transform 0.2s; /* Transition effect for hover */
 }
 
-.game-tile:hover {
-    transform: scale(1.05); /* Slightly enlarge on hover */
+.game-card:hover {
+    transform: scale(1.05); /* Slightly enlarge the card on hover */
 }
 
-.game-tile img {
-    width: 100%;
-    height: auto;
-    border: 2px solid black; /* Black border around the thumbnail */
-    border-radius: 10px 10px 0 0; /* Rounded edges for the top only */
+.game-card img {
+    border-radius: 10px; /* Rounded edges for images */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Slight shadow for images */
+    max-width: 100%; /* Ensure image does not overflow */
+    height: auto; /* Maintain aspect ratio */
 }
 
-.game-tile h3 {
-    margin: 10px 0;
-    color: #2c3e50;
+.game-card h3 {
+    color: #495057; /* Darker gray for text */
+    margin: 10px 0; /* Margin above and below headers */
 }
 
-.game-tile button {
-    margin-bottom: 10px;
-    background-color: #3498db;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s;
+.like-button {
+    background-color: #007bff; /* Bootstrap primary color */
+    color: white; /* White text */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded edges */
+    padding: 10px; /* Padding for button */
+    cursor: pointer; /* Pointer cursor */
+    transition: background-color 0.3s; /* Transition effect for hover */
 }
 
-.game-tile button:hover {
-    background-color: #2980b9; /* Darker shade on hover */
+.like-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
 }

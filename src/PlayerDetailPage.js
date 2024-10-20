@@ -16,12 +16,15 @@ const PlayerDetailPage = () => {
   if (!player) return <div>Loading...</div>;
 
   return (
-    <div>
+    <div className="player-details-container">
       <h1>{player.name}</h1>
       <img src={player.picture} alt={player.name} width="200" height="200" />
-      <h2>Role: {player.details.role}</h2>
-      <h3>Rank: {player.details.rank}</h3>
-      {/* Render more detailed statistics here */}
+      <div className="player-info">
+        <h2>Role: {player.details.role}</h2>
+        <h3>Rank: {player.details.rank}</h3>
+        {/* Render more detailed statistics here */}
+      </div>
+      <button className="back-button" onClick={() => window.history.back()}>Back</button>
     </div>
   );
 };

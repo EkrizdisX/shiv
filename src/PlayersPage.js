@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import { useParams, useNavigate } from 'react-router-dom'; // Updated import
+import { useParams, useNavigate } from 'react-router-dom'; 
 import axios from 'axios';
-import './PLayersPage.css';
+import './PlayersPage.css'; // Updated to correct casing
+
 const PlayersPage = () => {
   const { gameId } = useParams();
   const [players, setPlayers] = useState([]);
-  const navigate = useNavigate(); // Updated to useNavigate
+  const navigate = useNavigate(); 
 
   useEffect(() => {
     axios.get(`http://localhost:5000/api/players/${gameId}`)
@@ -14,18 +15,18 @@ const PlayersPage = () => {
   }, [gameId]);
 
   const handlePlayerClick = (playerId) => {
-    navigate(`/player/${playerId}`); // Updated to use navigate
+    navigate(`/player/${playerId}`);
   };
 
   return (
-    <div>
+    <div className="players-container">
       <h1>Players</h1>
-      <div style={{ display: 'flex', flexWrap: 'wrap' }}>
+      <div className="players-grid">
         {players.map(player => (
-          <div key={player._id} style={{ margin: '10px', border: '1px solid black', padding: '10px' }}>
+          <div key={player._id} className="player-card">
             <img src={player.picture} alt={player.name} width="150" height="150" />
             <h3>{player.name}</h3>
-            <button onClick={() => handlePlayerClick(player._id)}>View Details</button>
+            <button className="view-details-button" onClick={() => handlePlayerClick(player._id)}>View Details</button>
           </div>
         ))}
       </div>
