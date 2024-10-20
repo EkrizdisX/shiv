@@ -1,0 +1,51 @@
+/* GamesPage.css */
+
+.games-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 0; /* Adds some margin at the top and bottom */
+}
+
+.game-tile {
+    margin: 10px;
+    border: 1px solid #ddd; /* Light border for the tile */
+    border-radius: 10px; /* Rounded edges for the tile */
+    background: white;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+    text-align: center;
+    width: calc(25% - 20px); /* Responsive width (4 tiles per row) */
+}
+
+.game-tile:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.game-tile img {
+    width: 100%;
+    height: auto;
+    border: 2px solid black; /* Black border around the thumbnail */
+    border-radius: 10px 10px 0 0; /* Rounded edges for the top only */
+}
+
+.game-tile h3 {
+    margin: 10px 0;
+    color: #2c3e50;
+}
+
+.game-tile button {
+    margin-bottom: 10px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.game-tile button:hover {
+    background-color: #2980b9; /* Darker shade on hover */
+}
