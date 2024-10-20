@@ -1,34 +1,53 @@
-/* PlayerDetailsPage.css */
+/* PlayerDetailPage.css */
+body {
+    background-color: #f8f9fa; /* Light gray background */
+    font-family: 'Arial', sans-serif;
+}
 
 .player-details-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    max-width: 600px;
+    max-width: 800px;
     margin: 20px auto;
+    background-color: white; /* White background */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.player-details-container h1 {
+    color: #343a40; /* Dark text */
+    text-align: center;
 }
 
 .player-details-container img {
-    width: 150px;
+    width: 100%;
     height: auto;
-    border-radius: 50%;
-    border: 2px solid #3498db;
+    border-radius: 10px; /* Rounded edges */
 }
 
-.player-details-container h2 {
-    margin: 10px 0;
-    color: #2c3e50;
-}
-
-.player-stats {
-    margin: 10px 0;
-    color: #333;
-}
-
-.player-details-container button {
+.player-info {
     margin-top: 20px;
+    color: #495057; /* Darker gray for text */
+}
+
+.player-info p {
+    margin: 10px 0;
+    font-size: 1em;
+}
+
+.back-button {
+    display: block;
+    background-color: #007bff; /* Bootstrap primary color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 20px auto;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100px;
+}
+
+.back-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
 }
