@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom'; // Updated import
 import axios from 'axios';
+import './GamesPage.css';
 
 const GamesPage = () => {
   const [games, setGames] = useState([]);

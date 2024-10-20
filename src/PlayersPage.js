@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom'; // Updated import
 import axios from 'axios';
-
+import './PlayersPage.css';
 const PlayersPage = () => {
   const { gameId } = useParams();
   const [players, setPlayers] = useState([]);
