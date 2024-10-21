@@ -19,12 +19,18 @@ const AcceptancePage = () => {
   }, []);
 
   const handleAccept = (player) => {
-    axios.post(`http://localhost:5000/api/player`, player) // Send player data to main player collection
+    axios.post(`http://localhost:5000/api/player`, player) // Add player to the main collection
       .then(res => {
         alert('Player accepted!');
-        setPendingPlayers(prevPlayers => prevPlayers.filter(p => p._id !== player._id));
+
+        // Delete player from pending players after accepting
+        axios.delete(`http://localhost:5000/api/pending-players/${player._id}`)
+          .then(() => {
+            setPendingPlayers(prevPlayers => prevPlayers.filter(p => p._id !== player._id)); // Update UI
+          })
+          .catch(err => console.error('Error deleting player:', err));
       })
-      .catch(err => console.error(err));
+      .catch(err => console.error('Error accepting player:', err));
   };
 
   return (
@@ -36,6 +42,7 @@ const AcceptancePage = () => {
             const game = games.find(game => game._id === player.gameId);
             return (
               <li key={player._id} className="pending-player-card">
+                <img src={player.picture} alt={player.name} width="150" height="150" />
                 <h3>{player.name}</h3>
                 <p>Game: {game ? game.name : 'Unknown Game'}</p>
                 <p>Role: {player.role}</p>

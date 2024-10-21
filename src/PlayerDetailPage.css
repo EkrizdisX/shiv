@@ -8,14 +8,14 @@ body {
 .player-details-container {
     max-width: 800px; /* Max width for the content */
     margin: 20px auto; /* Centered horizontally with top/bottom margin */
-    background-color: rgba(54, 148, 211, 0.404); /* White background for content */
+    background-color: rgba(0, 0, 0, 0.418); /* White background for content */
     border-radius: 10px; /* Rounded edges */
     padding: 20px; /* Padding inside the container */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
 .player-details-container h1 {
-    color: #343a40; /* Dark text for title */
+    color: #c3c4be; /* Dark text for title */
     text-align: center; /* Center the title */
 }
 
@@ -32,12 +32,13 @@ body {
 
 .player-info {
     margin-top: 20px; /* Space above the player info */
-    color: #000000; /* Darker gray for text */
+    color: #bdb9b9; /* Darker gray for text */
     text-align: center; /* Center the player info */
-    background-color: #db362052;
-    width: 5cm;
+    background-color: #00000054;
+    width: 10cmcm;
     align-content: center;
-    margin-left: 7.5cm;
+    margin-left: 1.5cm;
+    margin-right: 1.5cm;
     border-radius: 10px;
 }
 

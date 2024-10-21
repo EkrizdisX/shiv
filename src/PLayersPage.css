@@ -1,11 +1,17 @@
 /* PlayersPage.css */
+@font-face {
+    font-family: 'FONT';
+    src: url("./TimelessMemoriesRegular-2vvwo.otf") format('opentype'); /* Adjust path based on where you put the font */
+  }
 body {
     background-color: #2b86e2; /* Light gray background */
-    font-family: 'Arial', sans-serif;
+    font-family: 'FONT', sans-serif;
     margin: 0; /* Remove default margin */
 }
 
 .players-container {
+    font-family: 'FONT', sans-serif;
+
     max-width: 1200px; /* Max width for the content */
     margin: 20px auto; /* Centered horizontally with top/bottom margin */
     padding: 20px; /* Padding inside the container */
@@ -16,10 +22,7 @@ body {
 
     color: #ffffff; /* Darker gray for text */
     margin: 10px 0; /* Margin above and below headers */
-    text-shadow: 
-    0 0 5px rgba(0, 0, 0, 0.6),
-    0 0 10px rgba(68, 68, 68, 0.8), 
-    0 0 15px rgb(211, 202, 207);
+
 }
 
 .players-grid {
@@ -55,10 +58,7 @@ body {
 .player-card h3 {
     color: #ffffff; /* Darker gray for text */
     margin: 10px 0; /* Margin above and below headers */
-    text-shadow: 
-    0 0 5px rgba(0, 0, 0, 0.6),
-    0 0 10px rgba(68, 68, 68, 0.8), 
-    0 0 15px rgb(211, 202, 207);
+
 }
 
 .view-details-button {

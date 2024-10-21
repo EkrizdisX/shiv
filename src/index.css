@@ -1,7 +1,11 @@
 /* index.css */
+@font-face {
+  font-family: 'FONT';
+  src: url("./Puente\ Bueno\ St.ttf") format('truetype'); /* Adjust path based on where you put the font */
+}
 
 body {
-  font-family: 'Arial', sans-serif;
+  font-family: 'FONT', sans-serif;
   margin: 0;
   padding: 0;
   background-color: #f4f4f4;
