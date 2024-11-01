@@ -1,76 +1,112 @@
-/* PlayersPage.css */
-@font-face {
-    font-family: 'FONT';
-    src: url("./TimelessMemoriesRegular-2vvwo.otf") format('opentype'); /* Adjust path based on where you put the font */
-  }
-body {
-    background-color: #2b86e2; /* Light gray background */
-    font-family: 'FONT', sans-serif;
-    margin: 0; /* Remove default margin */
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+
+/* General Body Style */
+body.players {
+  /* solid background */
+  background: rgb(0,212,255);
+  
+  /* gradient background*/
+  background: linear-gradient(45deg, rgba(0,212,255,1) 0%, rgba(11,3,45,1) 100%);    
+  
+  /* photo background */
+  background-image: url(https://images.unsplash.com/photo-1619204715997-1367fe5812f1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1889&q=80);
+  background-size: cover;
+  background-position: center;  
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;    
+  height: 100vh;  
+  overflow-y: auto;
 }
 
+/* Background Video Container */
+
+
+/* Players Container */
 .players-container {
-    font-family: 'FONT', sans-serif;
-
-    max-width: 1200px; /* Max width for the content */
-    margin: 20px auto; /* Centered horizontally with top/bottom margin */
-    padding: 20px; /* Padding inside the container */
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  color: #ffffff;
+  text-align: center;
+  background-color: rgba(17, 25, 40, 0.404); /* Adds a transparent background for readability */
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
+/* Heading */
 .players-container h1 {
-    text-align: center; /* Center the title */
 
-    color: #ffffff; /* Darker gray for text */
-    margin: 10px 0; /* Margin above and below headers */
 
-}
-
-.players-grid {
+    border-radius: 12px;
+    color: #6a8fbe77;
+    padding: 38px;  
+    filter: drop-shadow(0 30px 10px rgba(0,0,0,0.125));
     display: flex;
-    flex-wrap: wrap; /* Wrap items on smaller screens */
-    justify-content: center; /* Center the grid */
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+    text-align: center;
+    overflow-y: auto;
 }
 
-.player-card {
-    margin: 10px; /* Margin between cards */
-    background-color: rgba(100, 182, 236, 0.178); /* White background for cards */
-    border-radius: 10px; /* Rounded edges for cards */
-    padding: 15px; /* Padding inside cards */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    text-align: center; /* Center text inside cards */
-    transition: transform 0.2s; /* Transition effect for hover */
+/* Players Grid */
+.players-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
 
+/* Player Card */
+.player-card {
+  width: 250px;
+  background-color: rgba(17, 25, 40, 0.363);
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .player-card:hover {
-    transform: scale(1.05); /* Slightly enlarge the card on hover */
+  transform: scale(1.05);
 }
 
+/* Player Image */
 .player-card img {
-    border-radius: 10px; /* Rounded edges for images */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Slight shadow for images */
-    max-width: 100%; /* Ensure image does not overflow */
-    height: 200px; /* Maintain aspect ratio */
-    width: 250px;
-    border: 5px solid #000000; /* Black border */
+    border-radius: 12px;
+  border: 1px solid rgba(255,255,255, 0.255);
+  width: 150px;
+  height: 150px;
+
+  object-fit: cover;
 }
 
+/* Player Name */
 .player-card h3 {
-    color: #ffffff; /* Darker gray for text */
-    margin: 10px 0; /* Margin above and below headers */
-
+  font-size: 1.2rem;
+  color: #00d4ff;
+  margin: 15px 0;
+  text-transform: uppercase;
 }
 
+/* View Details Button */
 .view-details-button {
-    background-color: #5a5a5a46; /* Bootstrap primary color */
-    color: white; /* White text */
-    border: none; /* No border */
-    border-radius: 5px; /* Rounded edges */
-    padding: 10px; /* Padding for button */
-    cursor: pointer; /* Pointer cursor */
-    transition: background-color 0.3s; /* Transition effect for hover */
+  background-color: transparent;
+  color: rgba(0, 212, 255, 0.9);
+  border: 1px solid rgba(0, 212, 255, 0.6);
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s;
 }
 
 .view-details-button:hover {
-    background-color: #0056b3; /* Darker blue on hover */
+  color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(0, 212, 255, 0.3);
+  transform: scale(1.1);
 }

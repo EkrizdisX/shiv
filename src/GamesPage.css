@@ -1,234 +1,253 @@
-/* Reset some basic elements for a consistent look */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  .background-video-container {
-    position: relative; /* Create a positioned container */
-    overflow: hidden; /* Prevent overflow */
-    height: 100vh; /* Full viewport height */
-}
-@font-face {
-  font-family: 'FONT';
-  src: url("./TimelessMemoriesRegular-2vvwo.ot") format('opentype'); /* Adjust path based on where you put the font */
+
+
+body.games {
+  background-color: #db3535;
+  background-image: url(./arc.jpg);
+  color: #fcf3f3;
+  line-height: 1.6;
+  overflow-y: auto;
+  overflow: hidden;
+
 }
 
 
-.background-video {
-    position: absolute; /* Position the video absolutely */
-    top: 50%; /* Center the video vertically */
-    left: 50%; /* Center the video horizontally */
-    min-width: 100%; /* Cover the full width */
-    min-height: 100%; /* Cover the full height */
-    width: auto; /* Auto width for aspect ratio */
-    height: auto; /* Auto height for aspect ratio */
-    z-index: -1; /* Send video behind content */
-    transform: translate(-50%, -50%); /* Center the video */
+
+/* Background Video Styling */
+.background-video-container1 {
+  position: fixed;
+  overflow: hidden;
+  overflow-y: auto;
+  height: 100vh;
 }
 
+.background-video1 {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1;
+  transform: translate(-50%, -50%);
+}
+
+/* Main Container Styling */
 .games-page-container {
-    max-width: 1200px;
-    margin: 20px auto;
-    padding: 20px;
-    background: rgba(0, 0, 0, 0.7); /* Use semi-transparent black for better visibility */
-    border-radius: 8px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    position: relative; /* Ensure this is relative for z-index stacking */
-    z-index: 1; /* Bring the content above the video */
+
+  background: rgba(0, 0, 0, 0.568);
+  border-radius: 12px;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
+  font-family: 'FONT', sans-serif;
+  display: grid;
+  flex-direction: column;
+  align-items: center;
+  height: 16cm;
+  overflow-y: auto;
+  margin: 1cm;
+  z-index: 0;
+  
 }
 
-  
-  body {
+/* Header Styling */
+.games-page-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
 
-    background-color: #db3535;
-    background-image: url(./arc.jpg);
-    color: #f70000;
-    line-height: 1.6;
-  }
-  
-  /* Container for the games page */
-  .games-page-container {
-    font-family: 'FONT', sans-serif;
-    max-width: 1200px;
-    margin: 20px auto;
-    padding: 20px;
-    background: #0000007e;
-    border-radius: 8px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  }
-  .games-page-container h1{
-    color: rgb(255, 255, 255);
+.tit h1 {
+  font-size: 3rem;
+  color: #ffffff;
+  margin-bottom: 15px;
+}
 
-  }
-  
-  /* Header styling */
-  .games-page-header {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  .games-page-header h1 {
-    font-size: 2.5rem;
-    color: #007BFF;
-    margin-bottom: 10px;
-  }
-  
-  .games-page-header p {
-    font-size: 1.2rem;
-    color: #666;
-  }
-  
-  /* Styling for the games grid */
-  .games-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 20px;
-  }
-  
-  /* Individual game card styling */
-  .game-card {
-    background: #8d8d8d54;
-    border: 1px solid #e1e1e1;
-    border-radius: 8px;
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    cursor: pointer;
-    width: 7.2cm;
-  }
-  
-  .game-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* Game thumbnail styling */
-  .game-card img {
-    margin: 10px;
-    width: 250px;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 10px;
-  }
-  
-  /* Game title and info styling */
-  .game-card-content {
-    padding: 15px;
-    text-align: center;
-  }
-  
-  .game-card-content h3 {
-    font-size: 1.5rem;
-    color: #d7e3f0; /* Text color */
-    margin-bottom: 10px;
-    position: relative;
+/* Grid Layout for Games */
+.games-grid {
 
-  }
-  
-  @keyframes pulse {
-    0%, 100% {
-      text-shadow: 
-        0 0 5px rgba(255, 183, 193, 0.6),
-        0 0 10px rgba(255, 105, 180, 0.8),
-        0 0 15px rgba(255, 20, 147, 1);
-    }
-    50% {
-      text-shadow: 
-        0 0 10px rgba(255, 183, 193, 0.8),
-        0 0 20px rgba(255, 105, 180, 1),
-        0 0 30px rgba(255, 20, 147, 1);
-    }
-  }
-  
-  
-  .game-card-content {
+  margin-right: 3cm;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
 
-    font-size: 1rem;
-    color: #fa0000;
-  }
-  
-  /* Responsive text sizes */
-  @media (max-width: 768px) {
-    .games-page-header h1 {
-      font-size: 2rem;
-    }
-    
-    .game-card-content h3 {
-      font-size: 5rem;
+  z-index: 1;
 
-    }
-  }
-/* GamesPage.css */
+}
 
-.like-button {
-    background-color: #00ccff4f; /* Blue background color */
-    color: white; /* White text color */
-    border: none; /* Remove border */
-    border-radius: 5px; /* Rounded corners */
-    padding: 10px 20px; /* Vertical and horizontal padding */
-    font-size: 16px; /* Font size */
-    cursor: pointer; /* Pointer cursor on hover */
-    transition: background-color 0.3s ease; /* Smooth background color transition */
-  }
-  
-  /* Change background color on hover */
-  .like-button:hover {
-    background-color: #0057b346; /* Darker blue on hover */
-  }
-  
-  /* Optional: Add a focus state for accessibility */
-  .like-button:focus {
-    outline: none; /* Remove default outline */
-    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5); /* Add a custom focus ring */
-  }
-  /* Navigation.css */
+/* Card Styling */
+.card {
+  width: 220px;
+  height: 290px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 0 36px;
+  perspective: 1500px;
+  margin:2cm;
+  margin-bottom: 1cm;
+}
 
+.cover-image {
+  width: 7cm;
+  height: 5cm;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.wrapper {
+  transition: all 0.5s;
+  position: absolute;
+  height: 5cm;
+  
+  margin-bottom: 3cm;
+}
+
+.card:hover .wrapper {
+  transform: perspective(900px) translateY(-5%) rotateX(25deg) translateZ(0);
+  box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+}
+
+.wrapper::before,
+.wrapper::after {
+  content: "";
+  opacity: 0;
+  width: 100%;
+  height: 80px;
+  transition: all 0.5s;
+  position: absolute;
+  left: 0;
+}
+
+.wrapper::before {
+  top: 0;
+  height: 100%;
+  background-image: linear-gradient(
+      to top,
+      transparent 46%,
+      rgba(12, 13, 19, 0.5) 68%,
+      rgba(12, 13, 19) 97%
+  );
+}
+
+.wrapper::after {
+  bottom: 0;
+  opacity: 1;
+  background-image: linear-gradient(
+      to bottom,
+      transparent 46%,
+      rgba(12, 13, 19, 0.5) 68%,
+      rgba(12, 13, 19) 97%
+  );
+}
+
+.card:hover .wrapper::before,
+.wrapper::after {
+  opacity: 1;
+}
+
+.card:hover .wrapper::after {
+  height: 120px;
+}
+
+.title {
+  width: 100%;
+  transition: transform 0.5s;
+  font-size: 1.7rem;
+  color: #d7e3f0;
+}
+
+.card:hover .title {
+  transform: translate3d(0%, -50px, 100px);
+}
+
+.character {
+  width:5cm;
+  height: 5cm;
+  opacity: 0;
+  transition: all 0.5s;
+  position: absolute;
+
+
+  z-index: 10; /* Ensure it’s above the card */
+  margin-bottom: 2cm;
+}
+
+.card:hover .character {
+  opacity: 1;
+  transform: translate3d(0%, -30%, 100px);
+}
+
+/* Navigation Menu */
 .navigation-menu {
-  font-family: 'FONT', sans-serif;
-    display: flex; /* Use flexbox for horizontal alignment */
-    justify-content: space-around; /* Space links evenly */
-    align-items: center; /* Center items vertically */
-    background-color: #ffffff21; /* Dark background color */
-    padding: 15px 20px; /* Padding around the menu */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.164);
+  padding: 15px 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+}
+
+.nav-link {
+  font-size: 1.5rem;
+  color: #f0f4f8;
+  transition: transform 0.3s;
+}
+
+.nav-link:hover {
+  transform: translateY(-5px);
+  color: #00ccff;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .games-page-header h1 {
+      font-size: 2rem;
   }
-  
-  .nav-link {
-    font-size: 1.5rem;
-    color: #f0f4f8; /* Text color */
-    margin-bottom: 10px;
-    position: relative;
-    
+
+  .card {
+      width: 240px;
+      height: 300px;
+  }
+
+  .title {
+      font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .games-page-container {
+      width: 100%;
+      padding: 15px;
+  }
+
+  .card {
+      width: 100%;
+  }
+}
+
+/* Entire Scrollbar */
+::-webkit-scrollbar {
+  width: 12px;  
+  display: none;             /* Width of the scrollbar */
+}
 
 
-  }
+
+.game-card-content{
+    align-items: center;
+    justify-content: center;
+}
+
+.game-card-content h3{
   
-  @keyframes pulse {
-    0%, 100% {
-      text-shadow: 
-        0 0 5px rgba(255, 183, 193, 0.6),
-        0 0 10px rgba(255, 105, 180, 0.8),
-        0 0 15px rgba(255, 20, 147, 1);
-    }
-    50% {
-      text-shadow: 
-        0 0 10px rgba(255, 183, 193, 0.8),
-        0 0 20px rgba(255, 105, 180, 1),
-        0 0 30px rgba(255, 20, 147, 1);
-    }
-  }
+  color: #d7e3f0;
+  text-align: center;
+}
+
+.like-button{
   
-  /* Change background color on hover */
-  .nav-link:hover {
-    
-    transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* Optional: Add active link style */
-  .nav-link.active {
-    background-color: #007bff; /* Blue background for the active link */
-    color: white; /* Ensure text color is white */
-  }
-  
-  
+  background-color: #00ccff2f;
+  color: #ffffff;
+}

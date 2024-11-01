@@ -1,6 +1,6 @@
 /* InsertPlayerPage.css */
-body {
-    background-color: #ffffff; /* White background */
+body.insert-player {
+    background-color: #3c6f91; /* White background */
     font-family: 'Arial', sans-serif;
 }
 

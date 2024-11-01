@@ -3,8 +3,8 @@
     src: url("./Bileha.otf") format('opentype'); /* Adjust path based on where you put the font */
   }
 
-body {
-    background-color: #f8f9fa; /* Light gray background */
+body.insert-player {
+    background-color: #5582ac85; /* Light gray background */
     font-family: 'garamond', sans-serif;
     margin: 0;
     padding: 0;
@@ -46,8 +46,8 @@ form {
 }
 
 .submission-form-container button {
-    background-color: #14e649; /* Bootstrap blue */
-    color: rgb(126, 119, 119);
+    background-color: #5495af57; /* Bootstrap blue */
+    color: rgba(255, 255, 255, 0.692);
     border: none;
     border-radius: 5px;
     padding: 10px;
@@ -57,7 +57,7 @@ form {
 }
 
 .submission-form-container button:hover {
-    background-color: #0056b3; /* Darker blue on hover */
+    background-color: #38a89583; /* Darker blue on hover */
 }
 
 .submission-form-container input[type="text"]:focus, select:focus {
